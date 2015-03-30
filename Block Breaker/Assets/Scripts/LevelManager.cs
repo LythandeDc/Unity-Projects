@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour {
 
+
 	public void LoadLevel(string name) {
 		Debug.Log("New Level load: " + name);
 		Application.LoadLevel(name);
@@ -11,5 +12,15 @@ public class LevelManager : MonoBehaviour {
 	public void QuitRequest(){
 		Debug.Log ("Quitting game");
 		Application.Quit();
+	}
+	
+	public void LoadNextLevel(){
+		Application.LoadLevel(Application.loadedLevel + 1);
+	}
+	
+	public void BrickDestroyed(){
+		if(Brick.breackableCount){
+			LoadNextLevel();
+		}
 	}
 }
