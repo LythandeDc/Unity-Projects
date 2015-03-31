@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour {
 	}
 	
 	public void BrickDestroyed(){
-		if(Brick.breackableCount){
+		if(Brick.breackableCount <= 0){
 			LoadNextLevel();
 		}
 	}
