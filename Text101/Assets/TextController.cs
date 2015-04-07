@@ -1,6 +1,11 @@
 ﻿	using UnityEngine;
-	using UnityEngine.UI; using System.Collections;
-	public class TextController : MonoBehaviour { public Text text;
+	using UnityEngine.UI; 
+	using System.Collections;
+	
+	public class TextController : MonoBehaviour { 
+	
+		public Text text;
+		
 		private enum States {cell, sheets_0, sheets_1, lock_0, lock_1, mirror, cell_mirror, freedom}; private States myState;
 		// Use this for initialization
 		void Start () {
